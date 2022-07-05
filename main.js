@@ -4,7 +4,7 @@ class MyHeader extends HTMLElement{
         <h1 id="title-text"><a href="index.html">Chase Copy Centre</a></h1>
         <ul id="top-menu">
             <li><a href="#">Stationery</a></li>
-            <li><a href="#">Laminating Services</a></li>
+            <li><a href="laminate.html">Laminating Services</a></li>
             <li><a href="#">Photocopying Services</a></li>
             <li id="about-us"><i class="fa-solid fa-caret-down"></i><a  href="#">About Us</a>
                 <ul id="about-us-list">
@@ -31,3 +31,43 @@ class MyFooter extends HTMLElement {
 }
 
 customElements.define('my-footer',MyFooter);
+
+let saveFile = () => {
+   
+    
+    const name = document.getElementById('name');
+    const address = document.getElementById('address');
+    const contact = document.getElementById('contact');
+
+
+
+    let data = "Name :" + name.value + "\r\n" + "Address: " + address.value + "\r\n" + "Contact #: " + contact.value;
+    console.log(data);
+
+
+
+    const textToBLOB = new Blob([data], {type: "pdf"});
+
+    
+    
+    let newlink = document.createElement("a");
+    newlink.download = "Laminating request";
+
+
+
+
+    if (window.webkitURL != null) {
+        newlink.href = window.webkitURL.createObjectURL(textToBLOB);
+    } else {
+        newlink.href = window.URL.createObjectURL(textToBLOB);
+        newlink.style.display = "none"; 
+        document.body.appendChild(newlink);
+    }
+    newlink.click();
+    
+}
+
+
+
+
+

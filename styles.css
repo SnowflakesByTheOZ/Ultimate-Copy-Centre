@@ -47,7 +47,7 @@
 }
 
 #top-menu li a:hover{
-    color: chocolate;
+    color: rgb(30, 210, 75);
     font-weight: bold;
 
 }
@@ -169,6 +169,17 @@
 
 #item-photo{
     width: 200px;
+}
+
+#title-laminate{
+    margin-top: 50px;
+    text-align: center;
+}
+
+#lam-btn{
+    /* color:red; */
+    /* background-color: rgb(194, 194, 219); */
+    /* border-radius: 30px; */
 }
 
   

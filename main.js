@@ -46,7 +46,7 @@ let saveFile = () => {
 
 
 
-    const textToBLOB = new Blob([data], {type: "pdf"});
+    const textToBLOB = new Blob([data], {type: "text/plain"});
 
     
     
@@ -56,7 +56,7 @@ let saveFile = () => {
 
 
 
-    if (window.webkitURL != null) {
+    if (window.webkitURL) {
         newlink.href = window.webkitURL.createObjectURL(textToBLOB);
     } else {
         newlink.href = window.URL.createObjectURL(textToBLOB);

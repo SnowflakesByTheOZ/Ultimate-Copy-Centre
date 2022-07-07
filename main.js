@@ -1,6 +1,7 @@
 class MyHeader extends HTMLElement{
     connectedCallback (){
         this.innerHTML = `
+        
         <h1 id="title-text"><a href="index.html">Chase Copy Centre</a></h1>
         <ul id="top-menu">
             <li><a href="#">Stationery</a></li>
@@ -32,16 +33,24 @@ class MyFooter extends HTMLElement {
 
 customElements.define('my-footer',MyFooter);
 
+
+
 let saveFile = () => {
    
     
     const name = document.getElementById('name');
     const address = document.getElementById('address');
     const contact = document.getElementById('contact');
+    let topText = document.getElementById('top-text');
+    let dateField = document.getElementById('date');
+    let formField = document.getElementById('formField');
 
 
 
-    let data = "Name :" + name.value + "\r\n" + "Address: " + address.value + "\r\n" + "Contact #: " + contact.value;
+    let data = "Name: " + name.value + "\r\n" 
+    + "Address: " + address.value + "\r\n" 
+    + "Contact #: " + contact.value + "\r\n" 
+    + "Requested Date: " + dateField.value + "\r\n";
     console.log(data);
 
 
@@ -64,6 +73,13 @@ let saveFile = () => {
         document.body.appendChild(newlink);
     }
     newlink.click();
+
+    name.value = " ";
+    address.value = " ";
+    contact.value = " ";
+
+    formField.style.display = "none";
+    topText.innerHTML = 'Thank you for making an appointment with us !';
     
 }
 

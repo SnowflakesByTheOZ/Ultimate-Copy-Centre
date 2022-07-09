@@ -182,5 +182,21 @@
     /* border-radius: 30px; */
 }
 
+#bic-pen-set{
+    display: flex;
+    margin-top: 40px;
+    
+}
+
+#bic-pen-set-img{
+    /* border: 1px solid black; */
+    
+}
+
+#bic-peb-set-info{
+    /* border: 1px solid black; */
+    margin-left: 50px;
+}
+
   
     

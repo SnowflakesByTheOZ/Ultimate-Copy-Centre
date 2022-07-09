@@ -2,7 +2,7 @@ class MyHeader extends HTMLElement{
     connectedCallback (){
         this.innerHTML = `
         
-        <h1 id="title-text"><a href="index.html">Chase Copy Centre</a></h1>
+        <h1 id="title-text"><a href="index.html">Ultimate Copy Centre</a></h1>
         <ul id="top-menu">
             <li><a href="#">Stationery</a></li>
             <li><a href="laminate.html">Laminating Services</a></li>
@@ -26,7 +26,7 @@ customElements.define('my-header', MyHeader);
 class MyFooter extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
-        <p>Built by Raymond Howell 2022</p>
+        <p>Built by Supercatch-8108 2022</p>
         `
     }
 }
